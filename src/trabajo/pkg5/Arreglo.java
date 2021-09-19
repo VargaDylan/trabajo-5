@@ -22,7 +22,8 @@ public class Arreglo {
             }    
         }
      return mayor;   
-     }  
+     }
+    
     //mente en blanco no se como seguir AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ayuda
     public static int cuentaVocales(String cadena){
         int nVocales=0;
@@ -46,9 +47,20 @@ public class Arreglo {
                 nCaracter+=1;
             }
         }
+        if (nCaracter==0){
+            System.out.println("el caracter no esta dentro del String");
+            return nCaracter;
+        }
         return nCaracter;
-        
+   
     }
-    
+  public static int buscarMayor(int [] arreglo){
+         int mayor=0;
+        for (int d = 0; d <= arreglo.length-1; d++) {//recorro las columnas por fila 
+              if (arreglo[d]>mayor){ //comparo el valor mayor actual con el valor puntual dentro de la matris o areglo bidimencional y si es mayor :
+                  mayor=arreglo[d];
+              }
+         }   return mayor;
+    }
 }        
     
