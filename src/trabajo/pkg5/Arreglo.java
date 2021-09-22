@@ -20,6 +20,7 @@ public class Arreglo {
                   mayor=matris[a][b];//remplaso el valor de mayor con el valor de la matris o arreglo bi dimencional
               }    
             }    
+            
         }
      return mayor;   
      }

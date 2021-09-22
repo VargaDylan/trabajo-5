@@ -20,7 +20,7 @@ public class PruevaArreglo {
     int largoArreglo1,numerosLista,largoM2;
      
             Scanner entrada= new Scanner(System.in);
- 
+ Scanner estring= new Scanner(System.in);
  System.out.println("ingrese cantidad de numeros dentro de la lista: ");    
    largoArreglo1=entrada.nextInt();
    int[] arreglo1=new int[largoArreglo1];
@@ -43,11 +43,11 @@ public class PruevaArreglo {
     }
     System.out.println("rellenaremos el arreglo bidimencional con rand para realizar la prueba");
     
-    for (int q=0;q<matris.length;q++){
-      for (int r=0;r<matris[q].length;r++){
-          matris[q][r]=(int) (Math.random()*100);
-      }   
-    }
+        for (int[] matri : matris) {
+            for (int r = 0; r < matri.length; r++) {
+                matri[r] = (int) (Math.random()*100);
+            }
+        }
     for (int q=0;q<matris.length;q++){
       for (int r=0;r<matris[q].length;r++){
           System.out.println("maris_["+(q+1)+"]["+(r+1)+"]: "+(matris[q][r]));
@@ -55,15 +55,19 @@ public class PruevaArreglo {
     
     }
    System.out.printf("el mayor numero dentro del arregolo es:  "+Arreglo.buscarMayor(matris));
- System.out.println("ingrese una cadena de estrig");
- String a=entrada.nextLine();
+   System.out.println();
+   System.out.println("ingrese una cadena de estrig");
+   String a=estring.nextLine();
+   
+   
+   
  
    System.out.printf("el numero de vocales dentro del String |"+a+"| es de:  "+Arreglo.cuentaVocales(a)+" vocales.");
   System.out.println();
  
  System.out.println("que caracter desea buscar dentro del String: ");
- char b=entrada.next().charAt(0);
- System.out.printf("la cantidad de veces que aparcese el caracter |"+b+"| dentro del String  es de:  "+Arreglo.cuentaCaracter(a, b)+" veces");
+ char b=estring.next().charAt(0);
+ System.out.printf("la cantidad de veces que aparce el caracter |"+b+"| dentro del String  es de:  "+Arreglo.cuentaCaracter(a, b)+" veces");
     
     }
     
